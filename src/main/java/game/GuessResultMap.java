@@ -2,6 +2,8 @@ package game;
 
 import java.util.HashMap;
 
+import static game.BaseballGameSetting.NUMBER_LENGTH;
+
 public class GuessResultMap {
     private final HashMap<GuessResult, Integer> result;
 
@@ -23,14 +25,9 @@ public class GuessResultMap {
 
     public void put(GuessResult guessResult) {
         result.put(guessResult, result.getOrDefault(guessResult, 0) + 1);
-
-    }
-
-    public void clear() {
-        result.clear();
     }
 
     public boolean isAllStrike() {
-        return getStrikeCount() == NumberBaseballGameManager.NUMBER_LENGTH;
+        return getStrikeCount() == NUMBER_LENGTH.value;
     }
 }

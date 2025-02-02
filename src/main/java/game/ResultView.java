@@ -1,5 +1,7 @@
 package game;
 
+import static game.BaseballGameSetting.NUMBER_LENGTH;
+
 public class ResultView {
 
     public static void printResult(GuessResultMap guessResultMap) {
@@ -20,6 +22,6 @@ public class ResultView {
     }
 
     public static void printAllStrike() {
-        System.out.printf("%s개의 숫자를 모두 맞히셨습니다! 게임 종료", NumberBaseballGameManager.NUMBER_LENGTH);
+        System.out.printf("%s개의 숫자를 모두 맞히셨습니다! 게임 종료", NUMBER_LENGTH.value);
     }
 }
